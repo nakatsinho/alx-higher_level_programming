@@ -1,10 +1,6 @@
-$(document).ready(function () {
-    $.ajax({
-        url: "https://fourtonfish.com/hellosalut/?lang=fr",
-        type: "GET",
-        datatype: "json",
-    })
-    .done(function( json ){
-        $("DIV#hello").text(json.hello);
-    })
-});
+$('document').ready(
+    ()=>{
+        $.get('https://fourtonfish.com/hellosalut/?lang=fr', (data)=>{
+            $('DIV#hello').text(data.hello);
+        });
+    });
